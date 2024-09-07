@@ -1,0 +1,25 @@
+fos_ck_editor:
+  default_config: default
+  configs:
+    default:
+      skin: "minimalist,/web/ckeditor/minimalist/"
+      versionCheck: false
+      toolbar:
+        - [ Bold, Italic, Underline, -, Cut, Copy, Paste, PasteText, PasteFromWord, -, Undo, Redo, -, NumberedList, BulletedList, -, Outdent, Indent, -, Blockquote, HorizontalRule, -, Image, Link, Unlink]
+        - [ Format, Maximize, -, Source]
+      filebrowserBrowseRouteParameters: {instance : 'ckeditor'}
+      filebrowserImageBrowseRouteParameters: {instance : 'ckeditor'}
+    minimal:
+      versionCheck: false
+      toolbar:
+        - [ Bold, Italic, Underline, -, Link, Unlink, -, Cut, Copy, Paste, PasteText, PasteFromWord, -, Undo, Redo, -, Maximize]
+      disallowedContent: ['div', 'p', 'ol', 'ul']
+
+twig:
+    file_name_pattern: '*.twig'
+    form_themes:
+        - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+
+when@test:
+    twig:
+        strict_variables: true

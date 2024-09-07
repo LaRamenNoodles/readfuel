@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div style="padding-top: 5%">
+
+    {{form_start(form)}}
+        {{form_row(form.title)}}
+        <br>
+        {{form_row(form.content)}}
+        <br>
+        {{form_row(form.submit)}}
+    {{form_end(form)}}
+
+    </div>
+
+{% endblock %}
